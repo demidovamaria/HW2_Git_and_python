@@ -1,6 +1,6 @@
 
 def main():
-    expression = input()
+    expression = input("Введите выражение: ")
     parts = expression.split()
 
     if len(parts) != 3:
@@ -15,6 +15,10 @@ def main():
         result = divide(num1, num2)
     elif sign == '-':
         result = subtract(num1, num2)
+    elif sign == '*':
+        result = multiply(num1, num2)
+    elif sign == '+':
+        result = add(num1, num2)
     else:
         print("Invalid operator")
         return
@@ -30,6 +34,12 @@ def divide(num1, num2):
 
 def subtract(num1, num2):
     return num1 - num2
+
+def add(num1, num2):
+    return num1 + num2
+
+def multiply(num1, num2):
+    return num1 * num2
 
 while True:
     main()
